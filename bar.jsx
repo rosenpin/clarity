@@ -14,7 +14,6 @@ const style = {
     height    : styles.height + "px",
     lineHeight: styles.height + "px",
     width: "auto",
-    WebkitBackdropFilter: "blur(20px)",
     WebkitUserSelect: "none",
     cursor: "default",
     fontFamily: styles.fontFamily,
@@ -31,7 +30,6 @@ const dimmedStyle = {
 
 const wallpaperBlurStyle = settings.backgroundBlurOnWindowOpen ? {
     backgroundColor: styles.colors.bgTint,
-    WebkitBackdropFilter: "blur(10px)",
     position: "fixed",
     ...(settings.bar.alignBottom ? {
         bottom: style.height,

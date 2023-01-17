@@ -63,10 +63,8 @@ const selectedStyleMinimal = {
 const appIconStyle = {
     display: "inline-block",
     verticalAlign: "middle",
-    width: "16px",
-    height: "16px",
-    margin: "0px 1px",
-    marginTop: "-1px",
+    width: "14px",
+    height: "14px",
     objectFit: "contain",
     filter: "drop-shadow(0 0 6px #333a)"
 };
