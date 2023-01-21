@@ -14,11 +14,11 @@ export default {
         green:  "#0aaa1a",
         button: {
             bg:        "#ffffffff",
-            halfDimBg: "#ffffff11",
+            halfDimBg: "#ffffff55",
             dimBg:     "#ffffff55",
             fg:        "#111111aa",
-            halfDimFg: "#11111166",
-            dimFg:     "#111111aa",
+            halfDimFg: "#11111199",
+            dimFg:     "#11111199",
         }
     },
     height: settings.bar.height,
