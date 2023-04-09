@@ -16,7 +16,7 @@ export default {
         paddingVertical  : 4,      // Vertical padding of the bar in points. (default=4)
         backgroundTint: '#000000', // The tint colour for the bar. Must be a 6 char hex color code or null.
         fontSize: 11,              // Font size of the bar in points. May auto shrink if less space is available. (default=12)
-        alignBottom: true,         // Whether to align the bar to the bottom if true, or otherwise align to the top. (default=true)
+        alignBottom: false,         // Whether to align the bar to the bottom if true, or otherwise align to the top. (default=true)
 
         // Settings for space elements at the left.
         space: {
@@ -38,17 +38,17 @@ export default {
         // These status indicators refresh at 30s intervals.
         // The clock is synchronised to refresh at the :00 second mark.
         status: {
-            wifi: false,                // whether to show wifi indicator while it's connected
+            wifi: true,                // whether to show wifi indicator while it's connected
             ethernet: false,            // whether show ethernet indicator while it's connected
             timeMachine: false,         // whether to show time machine indicator while it's running
             cpu: false,                 // whether to show indicator for high cpu usage or thermal throttling
-            power: false,               // whether to show battery & power mode indicators
+            power: true,               // whether to show battery & power mode indicators
             secureInput: false,        // whether to show an when Secure Input is enabled by some app or process
                                        //    - this may be useful to know when you're typing in a sensitive field,
                                        //      or to know when you should try the lock-unlock workaround when macOS is stuck in Secure Input mode,
                                        //      breaking apps monitoring for keyboard shortcuts like skhd, Alfred, etc.
                                        //      (https://apple.stackexchange.com/questions/331557/is-there-a-way-to-fix-or-disable-secure-input)
-            clock: false,               // whether to show date and time
+            clock: true,               // whether to show date and time
 
             // This picks whether detailed text is shown alongside the status indicators.
             details: {

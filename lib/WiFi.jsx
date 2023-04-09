@@ -1,8 +1,9 @@
 import settings from "./settings.jsx";
 import symbols from "./symbols.jsx";
+import styles from "./styles.jsx";
 
 const render = ({ wifiData, ethernetData }) => {
-    let wifiStyle = {};
+    let wifiStyle = {color:styles.colors.textColor};
     if (!wifiData.connected) wifiStyle.display = "none";
 
     let ssid = wifiData.ssid;

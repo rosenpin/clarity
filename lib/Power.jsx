@@ -27,6 +27,8 @@ const render = ({ powerData }) => {
     } else if (isCharging) {
         batteryStyle.color = styles.colors.green;
         chargeSymStyle.color = styles.colors.orange;
+    } else{
+        batteryStyle.color = styles.colors.textColor;
     }
 
     let suppStyle = {

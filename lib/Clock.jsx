@@ -1,4 +1,5 @@
 import symbols from "./symbols.jsx";
+import styles from "./styles.jsx";
 import { run } from "uebersicht";
 
 const render = () => {
@@ -10,9 +11,9 @@ const render = () => {
     const timeStr = date.toLocaleTimeString("en-SG", timeFormatOptions);
 
     return (<div>
-        <span onClick={() => run("open /System/Applications/Calendar.app")}>{dateStr}</span>
+        <span style={{color: styles.colors.textColor}} onClick={() => run("open /System/Applications/Calendar.app")}>{dateStr}</span>
         {", "}
-        <span onClick={() => run("open /System/Applications/Clock.app || open /System/Applications/Calendar.app")}>{timeStr}</span>
+        <span style={{color: styles.colors.textColor}} onClick={() => run("open /System/Applications/Clock.app || open /System/Applications/Calendar.app")}>{timeStr}</span>
     </div>);
 }
 export default render;
