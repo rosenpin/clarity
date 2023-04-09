@@ -5,7 +5,7 @@ export default {
         fg:  "#ffffffcc",
         dim: "#ffffff33",
         bg:     !!settings.bar.backgroundTint ? "#11111144" : "#11111100",
-        bgTint: "#00000000",//!!settings.bar.backgroundTint ? settings.bar.backgroundTint + "44" : "#00000000",
+        bgTint: !!settings.bar.backgroundTint ? settings.bar.backgroundTint + "77" : "#00000000", //"#00000000",//
         minimalFg:  "#ffffff88",
         minimalDim: "#ffffff33",
         minimalBg:  "#ffffff0a",
