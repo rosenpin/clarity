@@ -15,7 +15,7 @@ export default {
         paddingHorizontal: 16,     // Horizontal padding of the bar in points. (default=16, matches macOS Big Sur+ menu bar)
         paddingVertical  : 4,      // Vertical padding of the bar in points. (default=4)
         backgroundTint: '#000000', // The tint colour for the bar. Must be a 6 char hex color code or null.
-        fontSize: 11,              // Font size of the bar in points. May auto shrink if less space is available. (default=12)
+        fontSize: 13,              // Font size of the bar in points. May auto shrink if less space is available. (default=12)
         alignBottom: false,         // Whether to align the bar to the bottom if true, or otherwise align to the top. (default=true)
 
         // Settings for space elements at the left.

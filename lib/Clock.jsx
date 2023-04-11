@@ -8,11 +8,11 @@ const render = () => {
     const timeFormatOptions = { hour: 'numeric', minute: 'numeric', hour12: false };
 
     const dateStr = symbols.calendar + " " + date.toLocaleDateString("en-SG", dateFormatOptions);
-    const timeStr = date.toLocaleTimeString("en-SG", timeFormatOptions);
+    const timeStr = "    " + date.toLocaleTimeString("en-SG", timeFormatOptions);
 
     return (<div>
         <span style={{color: styles.colors.textColor}} onClick={() => run("open /System/Applications/Calendar.app")}>{dateStr}</span>
-        {", "}
+        &nbsp;
         <span style={{color: styles.colors.textColor}} onClick={() => run("open /System/Applications/Clock.app || open /System/Applications/Calendar.app")}>{timeStr}</span>
     </div>);
 }
