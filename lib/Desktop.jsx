@@ -63,8 +63,9 @@ const selectedStyleMinimal = {
 const appIconStyle = {
     display: "inline-block",
     verticalAlign: "middle",
-    width: "14px",
-    height: "14px",
+    paddingBottom: "2px",
+    width: "12px",
+    height: "12px",
     objectFit: "contain",
     filter: "drop-shadow(0 0 6px #333a)"
 };
@@ -101,7 +102,7 @@ const getAppIconElement = (appData, styleOverrides) => {
     let appWindowId = appData.id;
 
     if (!settings.bar.space.showApps) return null;
-    if (settings.bar.space.minimal || styles.heightWithoutPadding < 16) return (<span>{symbols.app}</span>);
+    if (settings.bar.space.minimal) return (<span>{symbols.app}</span>);
 
     let appIconName      = getAppIconName(appName)
     let relAppIconPath   = appIconName ? getAppIconPath(appName) : null;
@@ -139,8 +140,6 @@ const getAppIconElement = (appData, styleOverrides) => {
 
 // Renders single sticky window element
 const renderStickyWindow = (displayData, stickyWindow) => {
-    if (styles.heightWithoutPadding < 16) return null;
-
     let X = displayData.frame.x;
     let Y = displayData.frame.y;
     let W = displayData.frame.w;
@@ -175,7 +174,7 @@ const renderStickyWindow = (displayData, stickyWindow) => {
 // Renders single space element
 const renderSpace = (index, focused, visible, nativeFullscreen, windows) => {
     let contentStyle = desktopGroupBaseStyle;
-    if (styles.heightWithoutPadding < 16) {
+    if (styles.heightWithoutPadding < 10) {
         if (focused == 1) {
             contentStyle = {...contentStyle, ...selectedStyleMinimal};
         } else if (visible == 1) {
@@ -248,7 +247,7 @@ const renderSpace = (index, focused, visible, nativeFullscreen, windows) => {
             return true;
         }
         function renderSeparator(w1, w2) {
-            if (settings.bar.space.minimal || styles.heightWithoutPadding < 16) return;
+            if (settings.bar.space.minimal) return;
             if (!w1) return;
             if (
                 (!w2 && (w1["is-floating"] || w1["has-fullscreen-zoom"])) ||
@@ -265,7 +264,7 @@ const renderSpace = (index, focused, visible, nativeFullscreen, windows) => {
         }
         for (let i = 0; i < nonStickyWindows.length; i++) {
             let w = nonStickyWindows[i];
-            if (w["stack-index"] == 0 || settings.bar.space.minimal || styles.heightWithoutPadding < 16) {
+            if (w["stack-index"] == 0 || settings.bar.space.minimal) {
                 if (renderStack()) {
                     if (i - 1 >= 0) {
                         let prevW = nonStickyWindows[i - 1];

@@ -5,7 +5,7 @@ import styles from "./lib/styles.jsx";
 import settings from "./lib/settings.jsx";
 
 const style = {
-    padding: "0 8px",
+    padding: "0 0px",
     display: "grid",
     gridAutoFlow: "column",
     gridGap: "16px",
