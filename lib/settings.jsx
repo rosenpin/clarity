@@ -16,7 +16,7 @@ export default {
         paddingVertical  : 0,      // Vertical padding of the bar in points. (default=4)
         backgroundTint: '#000000', // The tint colour for the bar. Must be a 6 char hex color code or null.
         fontSize: 12,              // Font size of the bar in points. May auto shrink if less space is available. (default=12)
-        alignBottom: false,         // Whether to align the bar to the bottom if true, or otherwise align to the top. (default=true)
+        alignBottom: true,         // Whether to align the bar to the bottom if true, or otherwise align to the top. (default=true)
 
         // Settings for space elements at the left.
         space: {
