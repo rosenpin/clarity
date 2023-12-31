@@ -17,6 +17,13 @@ const getAppIconName = (appName) => {
     return appName;
 }
 const getAppIconPath = (appName) => {
-    return "/clarity/appIcons/" + encodeURIComponent(getAppIconName(appName) + ".png")
+    console.log("getAppIconPath", appName)
+    console.log("getAppIconPath", "/clarity/appIcons/" + fixURI(encodeURIComponent(getAppIconName(appName) + ".png")))
+    return "/clarity/appIcons/" + fixURI(encodeURIComponent(getAppIconName(appName) + ".png"))
 }
-export { getAppIconPath, getAppIconName };
+const fixURI = (uri) => {
+    return uri.replace(/%E2%80%8E/g, "");
+}
+
+export { getAppIconName, getAppIconPath };
+
