@@ -66,6 +66,14 @@ There are three widgets total:
 The widgets for displaying yabai workspaces and status don't refresh automatically (to preserve battery). To refresh them, you can add these lines utilizing [yabai's signals](https://github.com/koekeishiya/yabai/wiki/Commands#automation-with-rules-and-signals) at the end of `.yabairc`:
 
 ```sh
+# reload Übersicht
+pkill Übersicht
+open -a Übersicht
+sudo -u "${YOUR_USERNAME_HERE}" pkill Übersicht
+sudo -u "${YOUR_USERNAME_HERE}" open -a Übersicht
+
+sleep 3
+
 # clarity config updates
 REL_SPACES_IND="osascript -e 'tell application id \"tracesof.Uebersicht\" to refresh widget id \"clarity-spaces-jsx\"'"
 REL_BAR_IND="osascript -e 'tell application id \"tracesof.Uebersicht\" to refresh widget id \"clarity-bar-jsx\"'"
@@ -103,8 +111,8 @@ yabai -m signal --add event=application_visible action="$REL_BAR_IND"
 yabai -m signal --add event=mission_control_exit action="$REL_BAR_IND"
 
 # refresh immediately on yabai load
-osascript -e "$REL_SPACES_IND"
-osascript -e "$REL_BAR_IND"
+eval "$REL_SPACES_IND"
+eval "$REL_BAR_IND"
 ```
 
 ### Caveats
